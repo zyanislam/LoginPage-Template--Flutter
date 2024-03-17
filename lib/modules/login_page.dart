@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:login_signup/components/tile.dart';
 
 import '../components/button.dart';
 import '../components/textfield.dart';
@@ -59,7 +60,36 @@ class LoginPage extends StatelessWidget {
             MyButton(
               onTap: signInFun,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 30),
+            Row(
+              children: [
+                Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Text(
+                    'Or continue with',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MyTile(imgPath: 'images/Google.png'),
+                MyTile(imgPath: 'images/Facebook.png'),
+              ],
+            ),
           ]),
         ),
       ),
