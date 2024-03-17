@@ -20,8 +20,8 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Color.fromARGB(252, 16, 16, 20),
       body: SafeArea(
         child: Center(
-          child: Column(children: [
-            SizedBox(height: 70),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            SizedBox(height: 50),
             Image.asset(
               "images/Logo.png",
               width: 140,
@@ -56,11 +56,11 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ]),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             MyButton(
               onTap: signInFun,
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 40),
             Row(
               children: [
                 Expanded(
@@ -82,7 +82,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
