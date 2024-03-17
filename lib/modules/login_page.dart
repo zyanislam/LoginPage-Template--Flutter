@@ -2,10 +2,13 @@
 
 import 'package:flutter/material.dart';
 
+import '../components/button.dart';
 import '../components/textfield.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
+
+  void signInFun() {}
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -20,7 +23,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 70),
             Image.asset(
               "images/Logo.png",
-              width: 160,
+              width: 140,
             ),
             SizedBox(height: 40),
             Text(
@@ -52,6 +55,11 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ]),
+            SizedBox(height: 20),
+            MyButton(
+              onTap: signInFun,
+            ),
+            SizedBox(height: 10),
           ]),
         ),
       ),
