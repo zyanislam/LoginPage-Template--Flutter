@@ -16,8 +16,17 @@ class LoginPage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/1.jpg'), fit: BoxFit.cover)),
-          )
+                    image: AssetImage('images/2.png'), fit: BoxFit.cover)),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Colors.transparent,
+              Colors.transparent,
+              Color(0xff161d27).withOpacity(0.9),
+              Color(0xff161d27)
+            ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          ),
         ],
       ),
     );
