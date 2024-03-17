@@ -90,6 +90,21 @@ class LoginPage extends StatelessWidget {
                 MyTile(imgPath: 'images/Facebook.png'),
               ],
             ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Not a member?',
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'Click Here to Register',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
           ]),
         ),
       ),
