@@ -2,8 +2,13 @@
 
 import 'package:flutter/material.dart';
 
+import '../components/textfield.dart';
+
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +36,20 @@ class LoginPage extends StatelessWidget {
                 "Welcome back!",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 25,
                 ),
+              ),
+              SizedBox(height: 50),
+              MyTextField(
+                controller: usernameController,
+                hintText: 'Enter your username',
+                obscureText: false,
+              ),
+              SizedBox(height: 10),
+              MyTextField(
+                controller: passwordController,
+                hintText: 'Enter your password',
+                obscureText: true,
               ),
             ],
           ),
