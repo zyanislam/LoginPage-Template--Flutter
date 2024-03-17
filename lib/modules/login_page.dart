@@ -61,27 +61,25 @@ class LoginPage extends StatelessWidget {
               onTap: signInFun,
             ),
             SizedBox(height: 40),
-            Row(
-              children: [
-                Expanded(
-                  child: Divider(
-                    thickness: 0.5,
-                  ),
+            Row(children: [
+              Expanded(
+                child: Divider(
+                  thickness: 0.5,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Text(
-                    'Or continue with',
-                    style: TextStyle(color: Colors.white),
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Text(
+                  'Or continue with',
+                  style: TextStyle(color: Colors.white),
                 ),
-                Expanded(
-                  child: Divider(
-                    thickness: 0.5,
-                  ),
+              ),
+              Expanded(
+                child: Divider(
+                  thickness: 0.5,
                 ),
-              ],
-            ),
+              ),
+            ]),
             SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -91,20 +89,18 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Not a member?',
-                  style: TextStyle(color: Colors.white),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  'Click Here to Register',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                'Not a member?',
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(width: 10),
+              Text(
+                'Click Here to Register',
+                style:
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+              ),
+            ]),
           ]),
         ),
       ),
