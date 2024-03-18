@@ -1,18 +1,24 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:login_signup/components/button.dart';
+import 'package:login_signup/components/textfield.dart';
 import 'package:login_signup/components/tile.dart';
-
-import '../components/button.dart';
-import '../components/textfield.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
 
-  void signInFun() {}
-
-  final usernameController = TextEditingController();
+  // Text Field Controllers
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
+
+  void signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: emailController.text,
+      password: passwordController.text,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +42,8 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 50),
             MyTextField(
-              controller: usernameController,
-              hintText: 'Username',
+              controller: emailController,
+              hintText: 'email',
               obscureText: false,
             ),
             SizedBox(height: 10),
@@ -58,7 +64,7 @@ class LoginPage extends StatelessWidget {
             ]),
             SizedBox(height: 40),
             MyButton(
-              onTap: signInFun,
+              onTap: signIn,
             ),
             SizedBox(height: 40),
             Row(children: [
