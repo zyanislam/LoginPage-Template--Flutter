@@ -20,7 +20,7 @@ class _BottomNavState extends State<BottomNav> {
           GButton(icon: Icons.home, text: 'Home'),
           GButton(icon: Icons.explore, text: 'Explore'),
           GButton(icon: Icons.favorite_outline, text: 'Likes'),
-          GButton(icon: Icons.person, text: 'Users'),
+          GButton(icon: Icons.person, text: 'User'),
         ],
       ),
     );
