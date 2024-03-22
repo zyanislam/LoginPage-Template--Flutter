@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.27.0
   firebase_auth: ^4.17.8
+  google_nav_bar: ^5.0.6
 
 dev_dependencies:
   flutter_test:
@@ -48,8 +49,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+# For information on the generic Dart part of this file, see the following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
