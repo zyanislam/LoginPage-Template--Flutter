@@ -33,7 +33,28 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text("Logged In"),
       ),
-      bottomNavigationBar: BottomNavigationBar(),
+      bottomNavigationBar: SafeArea(
+        child: Container(
+          height: 56,
+          padding: EdgeInsets.all(12),
+          margin: EdgeInsets.symmetric(horizontal: 24),
+          decoration: BoxDecoration(
+            color: Color(0xFF17203A).withOpacity(0.8),
+            borderRadius: BorderRadius.circular(24),
+            boxShadow: [
+              BoxShadow(
+                color: Color(0xFF17203A).withOpacity(0.3),
+                offset: Offset(0, 20),
+                blurRadius: 20,
+              )
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [],
+          ),
+        ),
+      ),
     );
   }
 }
