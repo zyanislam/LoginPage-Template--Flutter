@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text("Logged In"),
       ),
+      bottomNavigationBar: BottomNavigationBar(),
     );
   }
 }
