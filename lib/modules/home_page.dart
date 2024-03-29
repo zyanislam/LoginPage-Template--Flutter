@@ -17,19 +17,20 @@ class HomePage extends StatelessWidget {
       backgroundColor: Color.fromARGB(251, 198, 198, 198),
       appBar: AppBar(
         elevation: 0,
+        centerTitle: true,
         title: Text(
           "Home",
           style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 255, 255, 255),
+            // fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 1, 1, 1),
           ),
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         actions: [
           IconButton(
             onPressed: signOut,
             icon: Icon(Icons.logout),
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Color.fromARGB(255, 1, 1, 1),
           )
         ],
       ),
