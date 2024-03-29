@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import "package:flutter/material.dart";
 import "package:google_nav_bar/google_nav_bar.dart";
 
 class BottomNav extends StatefulWidget {
-  const BottomNav({super.key});
+  const BottomNav({Key? key}) : super(key: key);
 
   @override
   State<BottomNav> createState() => _BottomNavState();
@@ -13,17 +11,20 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: Container(
-        color: Colors.black,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 30),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(100),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
           child: GNav(
-            gap: 8,
+            gap: 20,
             padding: EdgeInsets.all(16),
-            backgroundColor: Colors.black,
-            color: Colors.white,
-            activeColor: Color.fromARGB(255, 154, 135, 212),
+            backgroundColor: Colors.transparent,
+            color: const Color.fromARGB(255, 52, 52, 52),
+            activeColor: Color.fromARGB(255, 255, 255, 255),
             tabBackgroundColor: Colors.grey.shade800,
             tabs: [
               GButton(icon: Icons.home, text: 'Home'),
